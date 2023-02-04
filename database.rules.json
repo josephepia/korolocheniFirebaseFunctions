@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "testPath":{
+      ".write": "root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === true ? !(!data.exists() && !newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === false ? false :
+                (root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === 'CU' ? newData.exists() :
+                (root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === 'CD' ? (!(data.exists() && newData.exists()) && !(!data.exists() && !newData.exists())) :
+                (root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === 'C' ? (!data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === 'UD' ? data.exists():
+                (root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === 'U' ? (data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === 'D' && (!newData.exists() && data.exists())
+                )
+                )
+                )
+                )
+                )
+                )
+                )",
+      ".read": "root.child('authorizations').child(auth.uid).child('testPath').child('read').val() === true",
+      ".indexOn": "visible",
+      //".validate": "newData.is"
+    }
+  }
+} 
