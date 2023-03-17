@@ -1,0 +1,56 @@
+# estructura para diccionario de datos
+resources:
+  ^[a-zA-Z0-9_.-]*$:              # $id_resources
+    description: string
+    isPublic: boolean
+    isQueryable: boolean
+    isRestricted: boolean
+    name: string
+
+# estructura para permisos
+permissionsBase:
+  ^[a-zA-Z0-9_.-]*$:              # $id_permissions
+    description: string
+    name: string
+    resources:                    # lista de recursos asociados al permiso con sus respectivos privilegios
+      $id_resources:              # fk identificador de recurso
+        read: boolean
+        write: boolean
+    roles:                        # lista de roles asociados al permiso
+      $id_roles:                  # fk identificador de role
+        description: string
+        name: string
+
+# estructura para roles 
+roles:
+  ^[a-zA-Z0-9_.-]*$:              # $id_roles
+    name: string
+    description: string
+    permissions:                  # lista de permisos asociados al rol
+      $id_permissions:            # fk identificador de permissions
+        description: string
+        name: string
+
+# estrucura para ususarios
+users:
+  ^[a-zA-Z0-9_.-]]*$:             # $id_users
+    displayName: string           # nombre completo
+    firsName: string              
+    lastName: string
+    phoneNumber: string
+    photoURL: string
+    email: string
+    roles:                        # lista de roles asociados
+      $id_roles:                  # fk indetificador de roles
+        description: string
+        name: string
+        
+# estrucura para perfiles
+profiles:
+  $uid:                           # $id_users
+    displayName: string           # nombre completo
+    firsName: string              
+    lastName: string
+    phoneNumber: string
+    photoURL: string
+    email: string

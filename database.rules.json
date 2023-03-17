@@ -6,7 +6,7 @@
                 (root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === 'CU' ? newData.exists() :
                 (root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === 'CD' ? (!(data.exists() && newData.exists()) && !(!data.exists() && !newData.exists())) :
                 (root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === 'C' ? (!data.exists() && newData.exists()) :
-                (root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === 'UD' ? data.exists():
+                (root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === 'DU' ? data.exists():
                 (root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === 'U' ? (data.exists() && newData.exists()) :
                 (root.child('authorizations').child(auth.uid).child('testPath').child('write').val() === 'D' && (!newData.exists() && data.exists())
                 )
@@ -19,6 +19,22 @@
       ".read": "root.child('authorizations').child(auth.uid).child('testPath').child('read').val() === true",
       ".indexOn": "visible",
       //".validate": "newData.is"
+    },
+    "pathLevel": {
+      ".write": false,
+      ".read": true,
+      "pathTowLevel1": {
+        ".write": true,
+        ".read": true
+      },
+      "pathTowLevel2": {
+        ".write": true,
+        ".read": true
+      },
+      "pathTowLevel3": {
+        ".write": false,
+        ".read": false
+      }
     }
   }
 } 

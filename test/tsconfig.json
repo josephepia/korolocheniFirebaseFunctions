@@ -7,11 +7,16 @@
     "sourceMap": true,
     "strict": true,
     "target": "es2017",
+    "types": [
+      // ... other types
+      "mocha"
+    ],
     "esModuleInterop": true,
   },
+  "typeRoots": ["node_modules/@types"],
   "compileOnSave": true,
   "include": [
-    "src",
-    "test/**/*",
-  ]
+    "src"
+  ],
+  "exclude": ["node_modules"]
 }
