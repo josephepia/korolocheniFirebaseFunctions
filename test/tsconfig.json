@@ -11,12 +11,15 @@
       // ... other types
       "mocha"
     ],
+    "moduleResolution": "Node",
     "esModuleInterop": true,
+    "resolveJsonModule": true
   },
   "typeRoots": ["node_modules/@types"],
   "compileOnSave": true,
   "include": [
-    "src"
+    "src",
+    "./**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

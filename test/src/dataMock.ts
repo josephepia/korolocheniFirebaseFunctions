@@ -1,4 +1,4 @@
-export const dictiionaryBase = {
+export const dictionaryBase = {
     paths: {
         description: '',
         isPublic: false,

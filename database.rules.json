@@ -32,9 +32,153 @@
         ".read": true
       },
       "pathTowLevel3": {
-        ".write": false,
+        ".write": true,
         ".read": false
       }
+    },
+    "clients": {
+      ".write": "root.child('authorizations').child(auth.uid).child('clients').child('write').val() === true ? !(!data.exists() && !newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('clients').child('write').val() === false ? false :
+                (root.child('authorizations').child(auth.uid).child('clients').child('write').val() === 'CU' ? newData.exists() :
+                (root.child('authorizations').child(auth.uid).child('clients').child('write').val() === 'CD' ? (!(data.exists() && newData.exists()) && !(!data.exists() && !newData.exists())) :
+                (root.child('authorizations').child(auth.uid).child('clients').child('write').val() === 'C' ? (!data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('clients').child('write').val() === 'DU' ? data.exists():
+                (root.child('authorizations').child(auth.uid).child('clients').child('write').val() === 'U' ? (data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('clients').child('write').val() === 'D' && (!newData.exists() && data.exists())
+                )
+                )
+                )
+                )
+                )
+                )
+                )",
+      ".read": "root.child('authorizations').child(auth.uid).child('clients').child('read').val() === true"
+    },
+    "employes": {
+      ".write": "root.child('authorizations').child(auth.uid).child('employes').child('write').val() === true ? !(!data.exists() && !newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('employes').child('write').val() === false ? false :
+                (root.child('authorizations').child(auth.uid).child('employes').child('write').val() === 'CU' ? newData.exists() :
+                (root.child('authorizations').child(auth.uid).child('employes').child('write').val() === 'CD' ? (!(data.exists() && newData.exists()) && !(!data.exists() && !newData.exists())) :
+                (root.child('authorizations').child(auth.uid).child('employes').child('write').val() === 'C' ? (!data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('employes').child('write').val() === 'DU' ? data.exists():
+                (root.child('authorizations').child(auth.uid).child('employes').child('write').val() === 'U' ? (data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('employes').child('write').val() === 'D' && (!newData.exists() && data.exists())
+                )
+                )
+                )
+                )
+                )
+                )
+                )",
+      ".read": "root.child('authorizations').child(auth.uid).child('employes').child('read').val() === true"
+    },
+    "paths": {
+      ".write": "root.child('authorizations').child(auth.uid).child('paths').child('write').val() === true ? !(!data.exists() && !newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('paths').child('write').val() === false ? false :
+                (root.child('authorizations').child(auth.uid).child('paths').child('write').val() === 'CU' ? newData.exists() :
+                (root.child('authorizations').child(auth.uid).child('paths').child('write').val() === 'CD' ? (!(data.exists() && newData.exists()) && !(!data.exists() && !newData.exists())) :
+                (root.child('authorizations').child(auth.uid).child('paths').child('write').val() === 'C' ? (!data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('paths').child('write').val() === 'DU' ? data.exists():
+                (root.child('authorizations').child(auth.uid).child('paths').child('write').val() === 'U' ? (data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('paths').child('write').val() === 'D' && (!newData.exists() && data.exists())
+                )
+                )
+                )
+                )
+                )
+                )
+                )",
+      ".read": "root.child('authorizations').child(auth.uid).child('paths').child('read').val() === true"
+    },
+    "permissions": {
+      ".write": "root.child('authorizations').child(auth.uid).child('permissions').child('write').val() === true ? !(!data.exists() && !newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('permissions').child('write').val() === false ? false :
+                (root.child('authorizations').child(auth.uid).child('permissions').child('write').val() === 'CU' ? newData.exists() :
+                (root.child('authorizations').child(auth.uid).child('permissions').child('write').val() === 'CD' ? (!(data.exists() && newData.exists()) && !(!data.exists() && !newData.exists())) :
+                (root.child('authorizations').child(auth.uid).child('permissions').child('write').val() === 'C' ? (!data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('permissions').child('write').val() === 'DU' ? data.exists():
+                (root.child('authorizations').child(auth.uid).child('permissions').child('write').val() === 'U' ? (data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('permissions').child('write').val() === 'D' && (!newData.exists() && data.exists())
+                )
+                )
+                )
+                )
+                )
+                )
+                )",
+      ".read": "root.child('authorizations').child(auth.uid).child('permissions').child('read').val() === true"
+    },
+    "posts": {
+      ".write": "root.child('authorizations').child(auth.uid).child('posts').child('write').val() === true ? !(!data.exists() && !newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('posts').child('write').val() === false ? false :
+                (root.child('authorizations').child(auth.uid).child('posts').child('write').val() === 'CU' ? newData.exists() :
+                (root.child('authorizations').child(auth.uid).child('posts').child('write').val() === 'CD' ? (!(data.exists() && newData.exists()) && !(!data.exists() && !newData.exists())) :
+                (root.child('authorizations').child(auth.uid).child('posts').child('write').val() === 'C' ? (!data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('posts').child('write').val() === 'DU' ? data.exists():
+                (root.child('authorizations').child(auth.uid).child('posts').child('write').val() === 'U' ? (data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('posts').child('write').val() === 'D' && (!newData.exists() && data.exists())
+                )
+                )
+                )
+                )
+                )
+                )
+                )",
+      ".read": "root.child('authorizations').child(auth.uid).child('posts').child('read').val() === true"
+    },
+    "roles": {
+      ".write": "root.child('authorizations').child(auth.uid).child('roles').child('write').val() === true ? !(!data.exists() && !newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('roles').child('write').val() === false ? false :
+                (root.child('authorizations').child(auth.uid).child('roles').child('write').val() === 'CU' ? newData.exists() :
+                (root.child('authorizations').child(auth.uid).child('roles').child('write').val() === 'CD' ? (!(data.exists() && newData.exists()) && !(!data.exists() && !newData.exists())) :
+                (root.child('authorizations').child(auth.uid).child('roles').child('write').val() === 'C' ? (!data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('roles').child('write').val() === 'DU' ? data.exists():
+                (root.child('authorizations').child(auth.uid).child('roles').child('write').val() === 'U' ? (data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('roles').child('write').val() === 'D' && (!newData.exists() && data.exists())
+                )
+                )
+                )
+                )
+                )
+                )
+                )",
+      ".read": "root.child('authorizations').child(auth.uid).child('roles').child('read').val() === true"
+    },
+    "shippings": {
+      ".write": "root.child('authorizations').child(auth.uid).child('shippings').child('write').val() === true ? !(!data.exists() && !newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('shippings').child('write').val() === false ? false :
+                (root.child('authorizations').child(auth.uid).child('shippings').child('write').val() === 'CU' ? newData.exists() :
+                (root.child('authorizations').child(auth.uid).child('shippings').child('write').val() === 'CD' ? (!(data.exists() && newData.exists()) && !(!data.exists() && !newData.exists())) :
+                (root.child('authorizations').child(auth.uid).child('shippings').child('write').val() === 'C' ? (!data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('shippings').child('write').val() === 'DU' ? data.exists():
+                (root.child('authorizations').child(auth.uid).child('shippings').child('write').val() === 'U' ? (data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('shippings').child('write').val() === 'D' && (!newData.exists() && data.exists())
+                )
+                )
+                )
+                )
+                )
+                )
+                )",
+      ".read": "root.child('authorizations').child(auth.uid).child('shippings').child('read').val() === true"
+    },
+    "users": {
+      ".write": "root.child('authorizations').child(auth.uid).child('users').child('write').val() === true ? !(!data.exists() && !newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('users').child('write').val() === false ? false :
+                (root.child('authorizations').child(auth.uid).child('users').child('write').val() === 'CU' ? newData.exists() :
+                (root.child('authorizations').child(auth.uid).child('users').child('write').val() === 'CD' ? (!(data.exists() && newData.exists()) && !(!data.exists() && !newData.exists())) :
+                (root.child('authorizations').child(auth.uid).child('users').child('write').val() === 'C' ? (!data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('users').child('write').val() === 'DU' ? data.exists():
+                (root.child('authorizations').child(auth.uid).child('users').child('write').val() === 'U' ? (data.exists() && newData.exists()) :
+                (root.child('authorizations').child(auth.uid).child('users').child('write').val() === 'D' && (!newData.exists() && data.exists())
+                )
+                )
+                )
+                )
+                )
+                )
+                )",
+      ".read": "root.child('authorizations').child(auth.uid).child('users').child('read').val() === true"
     }
   }
 } 

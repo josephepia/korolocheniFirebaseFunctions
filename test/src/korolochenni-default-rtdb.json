@@ -84,6 +84,10 @@
           "read": true,
           "write": true
         },
+        "shippings": {
+          "read": true,
+          "write": true
+        },
         "users": {
           "read": true,
           "write": true
@@ -110,29 +114,37 @@
         }
       },
       "resources": {
-        "paths": {
-          "write": false,
-          "read": true
-        },
-        "permissions": {
-          "write": false,
-          "read": true
-        },
-        "roles": {
-          "write": false,
-          "read": true
-        },
-        "posts": {
-          "write": false,
-          "read": true
+        "clients": {
+          "read": true,
+          "write": false
         },
         "employes": {
-          "write": false,
-          "read": true
+          "read": true,
+          "write": false
         },
-        "clients": {
-          "write": false,
-          "read": true
+        "paths": {
+          "read": true,
+          "write": false
+        },
+        "permissions": {
+          "read": true,
+          "write": false
+        },
+        "posts": {
+          "read": true,
+          "write": false
+        },
+        "roles": {
+          "read": true,
+          "write": false
+        },
+        "shippings": {
+          "read": true,
+          "write": false
+        },
+        "users": {
+          "read": true,
+          "write": false
         }
       }
     },
